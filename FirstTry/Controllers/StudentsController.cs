@@ -58,7 +58,7 @@ namespace FirstTry.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Ad,Soyad,No")] Student student)
+        public IActionResult Edit(int id, [Bind("Id,Ad,Soyad,No")] Student student)
         {
             if (id != student.Id)
             {
